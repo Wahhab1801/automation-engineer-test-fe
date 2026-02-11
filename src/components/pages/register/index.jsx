@@ -39,17 +39,24 @@ function Register() {
             Register for Shift Manager
           </h2>
           {errorMessage && errorMessage.trim() !== "" && (
-            <div className="text-center border border-red-300 p-3 mb-4 rounded-lg bg-red-50 text-red-700 shadow-sm text-sm">
+            <div
+              data-testid="register-error"
+              className="text-center border border-red-300 p-3 mb-4 rounded-lg bg-red-50 text-red-700 shadow-sm text-sm"
+            >
               {errorMessage}
             </div>
           )}
           {successMessage && successMessage.trim() !== "" && (
-            <div className="text-center border border-green-300 p-3 mb-4 rounded-lg bg-green-50 text-green-700 shadow-sm">
+            <div
+              data-testid="register-success"
+              className="text-center border border-green-300 p-3 mb-4 rounded-lg bg-green-50 text-green-700 shadow-sm"
+            >
               {successMessage}
             </div>
           )}
           <div className="flex flex-col gap-4">
             <Input
+              data-testid="register-name"
               isRequired
               name="name"
               label="Name"
@@ -70,6 +77,7 @@ function Register() {
             />
 
             <Input
+              data-testid="register-email"
               isRequired
               name="email"
               label="Email"
@@ -91,6 +99,7 @@ function Register() {
             />
 
             <PasswordInput
+              data-testid="register-password"
               isRequired
               name="password"
               label="Password"
@@ -111,6 +120,7 @@ function Register() {
             />
 
             <PasswordInput
+              data-testid="register-confirm-password"
               isRequired
               name="confirmPassword"
               label="Confirm Password"
@@ -132,6 +142,7 @@ function Register() {
 
             <Button
               type="submit"
+              data-testid="register-submit"
               className="w-full focus:outline-none hover:border-transparent bg-gradient-to-r from-orange-600 to-orange-700 hover:from-orange-500 hover:to-orange-600 text-white shadow-lg hover:shadow-orange-500/25 transition-all duration-300"
               size="lg"
               onPress={() => handleRegister()}

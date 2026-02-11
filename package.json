@@ -10,7 +10,9 @@
     "lint:fix": "eslint . --ext .js,.jsx --fix",
     "preview": "vite preview",
     "clean": "rimraf dist",
-    "nuke": "rimraf dist node_modules"
+    "nuke": "rimraf dist node_modules",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run"
   },
   "dependencies": {
     "@heroui/react": "2.7.11",
@@ -42,6 +44,7 @@
     "@types/react-dom": "^19.1.9",
     "@vitejs/plugin-react": "^5.0.3",
     "autoprefixer": "^10.4.21",
+    "cypress": "^13.13.2",
     "eslint": "^9.36.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-react-hooks": "^5.2.0",

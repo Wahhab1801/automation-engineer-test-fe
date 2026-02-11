@@ -61,6 +61,7 @@ const MainLayout = ({ children }) => {
                 size="sm"
                 variant="solid"
                 onPress={logout}
+                data-testid="logout-button"
               >
                 Logout
               </Button>
